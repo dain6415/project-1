@@ -1,0 +1,300 @@
+/* 테블릿 **********************************/
+@media only screen and (min-width: 601px) {
+  .wrap {padding: 80px;}
+  
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+
+  header {
+    height: 80px;
+  }
+
+  h1{width: 15%;}
+  h1 img{width: 90%;}
+
+  /* nav{width: 70%; border: 1px solid #000; } */
+  nav ul.main-menu {
+    gap: 20px;
+    text-align: center;
+  }
+  .right-menu {
+    width: 15%;}
+  .right-menu ul {
+    gap: 30px;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  .right-menu ul li{height: 100%;}
+
+
+    /* slide */
+    .sect1 {
+      background: url(../imgs/s.jpg) no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+    }
+
+    .summery {
+      color: var(--main-color);
+      background: var(--main-color);
+      width: 100%;
+      height: 260px;
+      color: var(--sub-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0px 80px;
+      /* margin-top: -50px; */
+      border: 1px solid #000;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      width: 65%;
+    }
+    .sub-summery {
+      font-size: 16px;
+      font-weight: 100;
+      color: var(--text-color-3);
+      gap: 30px;
+      width: 60%;
+    }
+    .artist {
+      width: 10%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-wrap: nowrap;
+    }
+
+
+
+    /* sect2-------------------------------------------------- */
+  .sect2 {
+    background: var(--main-color);
+    /* position: sticky; */
+    /* top: -300px; */
+    z-index: 10;
+    height: 104vh;}
+  .sect2 .grid {
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px 20px;}
+
+  .sect2 h3.f-20{font-size: 32px;}
+
+  .item{position: relative; display: inline-block; height: auto; cursor: pointer;}
+  .sect2 .item::before{content: ''; position: absolute; left: 50%;top: 50%;transform: translate(-50%, -50%); width: 105%;height: 105%; background-color: rgba(0, 0, 0, 0.062); opacity: 0; transition: opacity 0.2s ease;}
+  .item:hover::before{opacity: 1;}
+  .item img{height: 140px; width: 100%;}
+  
+  .item1{grid-column: 1/span 1;}
+  .item2{grid-column: 2/span 1;}
+  .item3{grid-column: 3/span 1;}
+  .item4{grid-column: 4/span 1;}
+  .item5{grid-column: 1/span 1; grid-row: 2/span 1;}
+  .item6{grid-column: 2/span 1; grid-row: 2/span 1;}
+  .item7{grid-column: 3/span 1; grid-row: 2/span 1;}
+  .item8{grid-column: 4/span 1; grid-row: 2/span 1;}
+  
+  .item .art-summery{position: none; margin-top: 15px;}
+  .item .art-summery h3{font-size: 16px;font-weight: 900; text-align: justify;letter-spacing: -1px;margin-bottom: 8px;}
+  .item .art-summery .more{height: 140px; display: flex; flex-direction: column; justify-content: space-between;}
+  p.art-subsummer, .condensation{font-size: 16px;text-align: justify;}
+  p.art-subsummer{color: var(--text-color-2); letter-spacing: -.1em; font-weight: 100; line-height: 20px;}
+
+  .condensation{color: var(--text-color); width: 100%; }
+  /* .condensation>p{display: inline-block;} */
+  .locat{gap:8px; margin-top: 5px;}
+  p.location{width: 80%; text-wrap: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  p.location2{width: 50%;}
+  .date{margin-top: 5px;}
+
+  /* button */
+  .btn{text-align: center;}
+  button{width: 160px; height: 50px; margin-top: 200px; background: var(--main-color);border: 1px solid #000; border-radius: 0px; }
+  button a{font-size: 20px;display: flex; justify-content: center; width: 100%;}
+  .fa-solid{font-size: 20px;}
+  /* button:hover{background: var(--text-color);} */
+
+
+
+  /* sect3-------------------------------------------------- */
+  .sect3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 99;
+    /* border: 1px solid #000; */
+  }
+  .sect3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--main-color) url(../imgs/sect3/getImage.jpg) no-repeat;
+    background-position: 30%;
+    background-size: cover;
+    filter: grayscale(100%);
+    z-index: -1;
+  }
+
+  .sect3-summary{height: 100%; padding-top: 20px;}
+  .sect3-summary h3.f-20 {
+    font-size: 32px; font-weight: 900;
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+
+  ul.summary-list {
+    width: 100%;
+    font-size: 100px;
+    /* font-weight: 100; */
+    line-height: 140px;
+    display: flex;
+    flex-direction: column; /* 수직 방향으로 배치 */
+    align-items: flex-start; /* 각 아이템을 왼쪽 정렬 */
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* 기본 목록 점 제거 */
+  }
+  
+  .summary-list li a{
+    color: transparent;
+    -webkit-text-stroke: 0.8px black;
+  }
+  .summary-list li:hover a{color: var(--text-color); 
+    -webkit-text-stroke: 0px;}
+
+
+  /* .sect3-summary1 li.gray{color: #bbbbbb;;} */
+  .sect3 .sect3-summary2 {
+    font-size: 50px;
+  }
+  .aa {
+    font-weight: 100;
+    font-size: px;
+  }
+
+  .sect3 ul.ddd{width: 100%;}
+  /* .sect3 ul.ddd {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  } */
+
+
+
+  /* sect4------------------------------------------------- */
+  .sect4{width: 100%; background: var(--main-color);z-index: 10; position: sticky; padding: 80px;}/*  왜 wrap이 안 먹지? */
+
+  .sect4 .box{display: grid; height: 210px; grid-template-columns: repeat(5,1fr); column-gap: 10px; margin-bottom: 100px;}
+  .sect4 .box .item{padding: 40px 30px; height: 100%; background: var(--main-color); border-radius: 5px; border: 1px solid #949494;}
+  .sect4 .box .item5{grid-column: 5; grid-row: 1;}
+
+  .sect4 .box .item .item-summary{width:100%;}
+  .sect4 .box .item .item-summary .sub{margin-bottom: 10px; border: 1px solid #c22c2c;}
+  .sect4 .box .item .item-summary h3{font-size: 20px;}
+  .sect4 .box .item5 .item-summary h3{letter-spacing: -1px;}
+  .sect4 .box .item .item-summary p{letter-spacing: -1px; font-size: 14px; line-height: 24px; text-align: justify; letter-spacing: -0.04cm;}
+  .sect4 .box .item i{ font-size: 20px; text-align: right; margin-top: 6px; transform: rotate(45deg);  transition: 0.5s; color: var(--text-color-2);}
+  
+
+  /* hover */
+  .sect4 .item:hover{outline: #000000 solid 1px; color: var(--sub-color);}
+  .sect4 .item:hover i{transform: rotate(0deg); color: var(--sub-color);transform-origin: center;}
+
+
+  /* timeline */
+  .sect4 .timeline{background: #eef0f1; width: 100%; align-self: flex-end; text-align:center; padding: 50px 40px;}
+  .sect4 .timeline h3{font-size: 32px; margin-bottom: 24px;}
+  .sect4 .timeline p{line-height: 30px; width: 80%; margin: auto;}
+  .sect4 .timeline p.Check a{background:var(--sub-color); color: #dfdfdf; display: inline-block; padding: 5px 20px; font-weight: 900; margin-top: 20px;}
+  /* .sect4 .calender p.Check:hover a{color:var(--main-color);} */
+
+
+
+
+  /* footer------------------------------------------------- */
+  footer{background: var(--main-color); padding: 0 80px 80px; font-size: 16px; align-items: center;}
+   /* .f-inner{border: 1px solid #000;} */
+  footer .f-top{justify-content: space-between; margin-bottom: 60px; display: flex;}
+  footer .f-top .f-logo{width: 50%;}
+  footer .f-top .f-logo ul li{color: var(--text-color-2); line-height: 24px;}
+  footer .f-top .f-logo img{width: 50%; margin-bottom: 30px;}
+  
+  /* 애가 더 상위 아닌가? 왜 올라가면 적용이 안되는 거임? 
+  아 html 순서때문인가?*/
+  footer .f-top >ul li{line-height: 34px; font-weight: 900;font-size: 16px; }
+
+  footer .f-top .family{width: 15%;}
+  footer .f-top .family p{margin-bottom: 10px; font-weight: 900;}
+  footer select{width: 100%; height: 40px; padding: 10px;}
+  
+  /* button */
+  footer .f-button{border-top: 1px solid var(--text-color-2); padding-top: 20px; display: flex;
+
+    /* 혹시나 모바일의 영향이 있을까하는.... */
+    flex-direction: row; 
+    justify-content: space-between; align-self: center;}
+  footer .f-button p{color: var(--text-color-3);}
+
+  footer .sns{width: 25%;}   
+  footer .sns ul {width: 100%; gap: 20px;}
+  footer .sns ul li{flex: 1;}
+  footer .sns ul li a img{width: 100%;}
+
+
+
+   /*table end  */
+
+
+
+
+
+
+
+  /* .timeline {
+    position: relative;
+    height: 500px;
+    border-left: 2px solid #ddd;
+  }
+  
+  .event {
+    position: absolute;
+    left: 50px;
+    width: 150px;
+    background-color: #007BFF;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  
+  .event span {
+    position: relative;
+  }
+  
+  .event:hover span:after {
+    content: '전시 정보 상세';
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+  } */
+
+
+
+  }

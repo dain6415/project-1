@@ -1,0 +1,67 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid #000; */
+}
+
+:root {
+  --main-color: #fff;
+  --sub-color: #000000;
+  --text-color: #333;
+  --text-color-2: #8b8b8b;
+  --text-color-3: #c2c2c2;
+  --t-color: #f1f1f1;
+ }
+
+/* 공통css */
+body{font-family: 'Pretendard-Regular', sans-serif; color: #333;background: var(--main-color);}
+/* section{background: var(--main-color);} */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.just-c {
+  justify-content: center;
+}
+.just-sb {
+  justify-content: space-between;
+}
+.aling-c {
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none; color:#333;
+}
+img{vertical-align: top;}
+
+
+.container { padding: 10ex;
+  /* width: 90%; */
+    /* 가상 컨테이너의 크기 설정 */
+  margin: 0 auto;
+  position: relative;
+  /* aspect-ratio: 16/9;  */
+   /* 화면 비율 고정 */
+  /* border: 1px solid #000; */
+  
+}
+
+.element {
+  position: absolute;
+  top: 10%;  /* 퍼센트 단위로 위치 설정 */
+  left: 10%;
+  width: 30%;
+  height: 20%;
+}
